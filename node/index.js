@@ -30,8 +30,8 @@ function foo () {
 
 app.get('/', (req,res) => {
 	res.send(
-		`<h1>FullCycle Challenge</h1>
-		<h3>Using docker-compose to launch a dummy application with nodejs + nginx + mysql</h3>
+		`<h1>Full Cycle Rocks!</h1>
+		<!-- h3>Using docker-compose to launch a dummy application with nodejs + nginx + mysql</h3-->
 		<p>${foo()}</p>
 		`
 	)
