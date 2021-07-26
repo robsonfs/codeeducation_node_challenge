@@ -1,4 +1,4 @@
-FROM node:15
+FROM node:16
 
 WORKDIR /usr/src/app
 
@@ -9,9 +9,8 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-RUN npm init && \
-  npm install express --save && \
-  npm install mysql --save
+RUN npm init -y
+RUN npm install express mysql --save
 
 COPY . .
 

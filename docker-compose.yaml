@@ -10,8 +10,6 @@ services:
     entrypoint: dockerize -wait tcp://db_challenge:3306 -timeout 50s docker-entrypoint.sh
     networks:
       - codeedunet
-    volumes:
-      - ./node:/usr/src/app
     tty: true
     depends_on:
       - db_challenge
